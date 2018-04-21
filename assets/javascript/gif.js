@@ -53,7 +53,7 @@ $("#animalButtons").on("click", 'button', function () {
 
                 if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
 
-                    var gifDiv = $("<div class='gif'>");
+                    var gifDiv = $("<div class='col-sm-4 gif'>");
 
                     var rating = results[i].rating;
 

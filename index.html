@@ -28,24 +28,28 @@
 </head>
 
 <body>
-    <div id="animalButtons">
+    <div class="container">
+        <div class="row">
+            <div id="animalButtons">
 
+            </div>
+
+            <form id="animal-form">
+                <label for="animal-input">Add an animal</label>
+                <input type="text" id="animal-input">
+                <br>
+
+
+                <input id="addAnimal" type="submit" value="submit">
+            </form>
+            <div class="row">
+                <div id="animals">
+                <!--do .empty method to clear -->
+                </div>                
+
+            </div>
+        </div>
     </div>
-
-    <form id="animal-form">
-        <label for="animal-input">Add an animal</label>
-        <input type="text" id="animal-input">
-        <br>
-
-
-        <input id="addAnimal" type="submit" value="submit">
-    </form>
-
-    <div id="animals">
-        <!--do .empty method to clear -->
-
-    </div>
-
     <!-- Javascript -->
 
     <script src="assets/javascript/gif.js">

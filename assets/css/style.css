@@ -1,16 +1,29 @@
+body {
+    background-color: lightblue;
+}
+
 #animal-input {
-    border: 1px solid red;
-    margin: 10px 0 10px 10px
+    border: 1px solid rgb(17, 105, 17);
+    margin: 10px 0 10px 0;
+    
 }
 
 #animalButtons {
-    margin: 10px 10px 10px 10px;
+    margin-top: 10px;
+    color: rgb(17, 105, 17);
+    
 }
 
 #addAnimal {
-    margin: 0 0 0 10px;
+    margin: 0 0 0 140px;
+    color: rgb(17, 105, 17);
 }
 
 label {
-    margin-left: 10px;
+    color: rgb(17, 105, 17);
+    
+}
+
+.topic-button {
+    margin-right: 10px;
 }
