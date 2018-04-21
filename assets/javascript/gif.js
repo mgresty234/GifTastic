@@ -28,6 +28,8 @@ $('#addAnimal').on('click', function () {
     makeTopicButton(newTopic);
 });
 
+
+
 $("#animalButtons").on("click", 'button', function () {
 
     var person = $(this).attr("data-name");
@@ -51,7 +53,7 @@ $("#animalButtons").on("click", 'button', function () {
 
                 if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
 
-                    var gifDiv = $("<div class='item'>");
+                    var gifDiv = $("<div class='gif'>");
 
                     var rating = results[i].rating;
 
@@ -59,13 +61,34 @@ $("#animalButtons").on("click", 'button', function () {
 
                     var personImage = $("<img>");
 
-                    personImage.attr("src", results[i].images.fixed_height.url);
+                    personImage.attr('data-state', 'still');
+                    personImage.attr('data-animate', results[i].images.fixed_height.url);
+                    personImage.attr('data-still', results[i].images.fixed_height_still.url);
+
+                    personImage.attr("src", results[i].images.fixed_height_still.url);
+
+                    personImage.click(gifState)
 
                     gifDiv.append(p);
                     gifDiv.append(personImage);
 
                     $("#animals").append(gifDiv);
+
+                        function gifState() {
+
+                        var state = $(this).attr("data-state");
+                        console.log(this);
+                        if (state === "still") {
+                            $(this).attr("src", $(this).attr("data-animate"));
+                            $(this).attr("data-state", "animate");
+                        } else {
+                            $(this).attr("src", $(this).attr("data-still"));
+                            $(this).attr("data-state", "still");
+                        }
+                    };
                 }
             }
         });
 });
+
+

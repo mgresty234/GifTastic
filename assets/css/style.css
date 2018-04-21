@@ -1,0 +1,16 @@
+#animal-input {
+    border: 1px solid red;
+    margin: 10px 0 10px 10px
+}
+
+#animalButtons {
+    margin: 10px 10px 10px 10px;
+}
+
+#addAnimal {
+    margin: 0 0 0 10px;
+}
+
+label {
+    margin-left: 10px;
+}
